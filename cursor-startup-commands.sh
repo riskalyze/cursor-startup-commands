@@ -27,7 +27,7 @@ else
   sudo ./aws/install --bin-dir /usr/bin --install-dir /usr/local/aws-cli --update
 fi
 
-# secrets in devin.ai env
+# secrets in cursor cloud agent env
 aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
 aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
 aws configure set default.region us-east-2
@@ -37,7 +37,7 @@ popd
 
 if [ -z $(which mise) ] 
 then
-  curl https://raw.githubusercontent.com/riskalyze/devin-ai-startup-commands/refs/heads/main/mise.run | sh
+  curl https://raw.githubusercontent.com/riskalyze/cursor-ai-startup-commands/refs/heads/main/mise.run | sh
   echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
   mise trust -a
 fi
@@ -46,7 +46,7 @@ mise install
 echo "deb [trusted=yes] https://packages.twingate.com/apt/ /" | sudo tee /etc/apt/sources.list.d/twingate.list
 sudo apt-get update -o Dir::Etc::sourcelist="sources.list.d/twingate.list" -o Dir::Etc::sourceparts="-" -o APT::Get::List-Cleanup="0"
 sudo apt install -yq twingate
-echo "${DEVIN_TWINGATE_ACCESS}" | sudo twingate setup --headless -
+echo "${CURSOR_TWINGATE_ACCESS}" | sudo twingate setup --headless -
 MAX_RETRIES=5
 WAIT_TIME=5
 n=0
