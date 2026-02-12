@@ -1,0 +1,15 @@
+_extends: probot-settings
+
+repository:
+  name: cursor-startup-commands
+  description: ECR, VPC, and required startup commands for Cursor Cloud Agent
+  allow_squash_merge: true
+  allow_merge_commit: false
+  allow_rebase_merge: false
+  use_squash_pr_title_as_default: true
+
+teams:
+  - name: solo
+    permission: push
+  - name: solo
+    permission: push

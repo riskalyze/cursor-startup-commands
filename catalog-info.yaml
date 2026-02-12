@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cursor-startup-commands
+  description: ECR, VPC, and required startup commands for Cursor Cloud Agent
+  annotations:
+    github.com/project-slug: riskalyze/cursor-startup-commands
+    github.com/team-slug: '@riskalyze/solo'
+  tags:
+    - poc
+spec:
+  type: service
+  lifecycle: experimental
+  owner: solo
