@@ -4,10 +4,10 @@
 version: 'v0.0.3'
 workflows:
     '.github/workflows/stale.yml':
-        - 'actions/stale@v10'
+        - 'actions/stale@v11'
 dependencies:
-    'actions/stale@v10':
-        ref: 'v10'
-        commit: 'sha1-1e223db275d687790206a7acac4d1a11bd6fe629'
+    'actions/stale@v11':
+        ref: 'v11'
+        commit: 'sha1-4391f3da665fdf50b6810c1a66712fb9ba21aa93'
         owner_id: 44036562
         repo_id: 200437066
